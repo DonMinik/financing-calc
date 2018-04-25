@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" ></script>
+  <script src="../js/app.js"></script>
+  <title>Financing Calculator - monthly rate</title>
+</head>
+<body ng-app="financing-calc-app">
+  <div id='main' ng-controller="annuity-controller" class="app rate">
+    <h2>Financing Calculator</h2>
+    <br>
+    <form >
+       <input type='text' placeholder="Interest rate in %" ng-model="interest" ng-change="send()" tabindex="1" autofocus/></br>
+       <input type="text" placeholder="Amount to borrow" ng-model="debt" ng-change="send()" tabindex="2"/></br>
+      <input type="text" placeholder="Duration in years " ng-model="duration" ng-change="send()" tabindex="3"/></br>
+    </form>
+  </br>
+    <div id='results' class="results">
+      <b>Your financing plan:</b>
+      <p>  {{an}} </p>
+      <!-- tbc -->
+    </div>
+  </br>
+  </div>
+  <div class="footer">
+      <a href="./amount-to-borrow.html" style="font-size: 7pt;
+        font-family: helvetica;
+        color:black">calculate maximum amount to borrow</a>
+  </div>
+</body>
+</html>
